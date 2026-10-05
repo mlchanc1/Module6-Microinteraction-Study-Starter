@@ -68,7 +68,12 @@ footer {
 .action {
   display: inline-block;
   padding: .75rem 1rem;
-  /* TODO: default action surface. */
+  background: var(--brand);
+  color: var(--paper);
+  border: 2px solid var(--brand);
+  border-radius: .5rem;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .action::after {
