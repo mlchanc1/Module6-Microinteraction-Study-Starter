@@ -78,7 +78,15 @@ footer {
 }
 
 .action::after {
-  /* TODO: decorative pseudo-element with empty content. */
+  content: " →";
+  display: inline-block;
+  margin-left: .35rem;
+  transition: transform 180ms ease;
+}
+
+.action:hover::after,
+.action:focus-visible::after {
+  transform: translateX(.25rem);
 }
 
 .action:hover {
