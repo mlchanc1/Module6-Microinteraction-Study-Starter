@@ -74,13 +74,29 @@ footer {
   border-radius: .5rem;
   font-weight: 700;
   text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .action::after {
   /* TODO: decorative pseudo-element with empty content. */
 }
 
-/* TODO: action hover, focus-visible, and active states with explicit transitions. */
+.action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 .35rem .75rem rgba(0, 0, 0, .2);
+}
+
+.action:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px var(--paper);
+}
+
+.action:active {
+  transform: translateY(1px);
+  box-shadow: 0 .1rem .25rem rgba(0, 0, 0, .2);
+}
+
 .choices {
   margin: 0;
   padding: 0;
