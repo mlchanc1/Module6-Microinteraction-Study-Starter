@@ -186,6 +186,17 @@ details[open] .confirmation {
   animation: confirm-pulse 400ms ease-out 1;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .action,
+  .action::after {
+    transition-duration: 0.01ms;
+  }
+
+  details[open] .confirmation {
+    animation: none;
+  }
+}
+
 /* TODO: apply at least three purposeful effects across the study. */
 /* TODO: create and trigger one short, finite keyframe animation. */
 /* TODO: add a tested reduced-motion strategy that preserves all feedback. */
