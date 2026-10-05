@@ -168,6 +168,24 @@ summary {
   padding: 1rem;
 }
 
+@keyframes confirm-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+details[open] .confirmation {
+  animation: confirm-pulse 400ms ease-out 1;
+}
+
 /* TODO: apply at least three purposeful effects across the study. */
 /* TODO: create and trigger one short, finite keyframe animation. */
 /* TODO: add a tested reduced-motion strategy that preserves all feedback. */
