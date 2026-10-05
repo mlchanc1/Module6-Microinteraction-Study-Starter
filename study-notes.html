@@ -30,7 +30,7 @@
     </head>
     <body>
         <h1>Microinteraction Study Notes</h1>
-        <p><strong>Student:</strong> [Name] &nbsp; <strong>Study context:</strong> [Context]</p>
+       <p><strong>Student:</strong> Maddy Chance &nbsp; <strong>Study context:</strong> GIT 337 Module 6 Microinteraction Study</p>
         <h2>1. Purpose and semantic baseline</h2>
         <table>
             <tr>
@@ -41,21 +41,21 @@
             </tr>
             <tr>
                 <td>Action</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                <td>Lets users quickly view the latest order status and understand the next step.</td>
+                <td>An anchor element is used because the action navigates the user directly to the order status result.</td>
+                <td>The link still works and takes the user to the order status information even without CSS.</td>
             </tr>
             <tr>
                 <td>Selection/status</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                 <td>Lets users choose a delivery option and clearly see which option is selected.</td>
+                <td>Radio inputs are used because the user is choosing one option from a group of delivery choices.</td>
+                <td>Without CSS, the radio buttons and their labels still show which option is selected.</td>
             </tr>
             <tr>
                 <td>Disclosure/confirmation</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                <td>Lets users open the order status details and view the confirmation information when they need it.</td>
+                <td>The details and summary elements are used because they provide a built-in way to expand and collapse additional information.</td>
+                <td>Without CSS, the details can still be opened and the confirmation text remains readable.</td>
             </tr>            
         </table>
         <h2>2. State map</h2>
@@ -68,39 +68,39 @@
             </tr>
             <tr>
                 <td>Default</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                <td>All specimens</td>
+                <td>Each control has clear text, borders, spacing, and a recognizable interactive appearance.</td>
+                <td>Meaning is communicated with text and structure, not color alone.</td>
             </tr>
             <tr>
                 <td>Hover</td>
-                <td>[Response]</td>                    
-                <td>[Response]</td>
-                <td>[Response]</td>
+                 <td>Action control</td>
+                <td>The action lifts slightly, gains a shadow, and the arrow moves to the right.</td>
+                <td>The text label remains visible, so the action does not depend on movement or color for meaning.</td>
             </tr>
             <tr>
                 <td>Focus-visible</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                 <td>Action control and delivery choices</td>
+                 <td>A visible outline appears when interactive controls receive keyboard focus.</td>
+                 <td>The outline provides a non-color-only boundary that makes the focused control easy to identify.</td>
             </tr>
             <tr>
                 <td>Active</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                 <td>Action control</td>
+                 <td>The action moves slightly downward and its shadow becomes smaller while it is being pressed.</td>
+                 <td>The action label remains visible, so the pressed state is supplemental feedback rather than the only way to understand the control.</td>
             </tr>
             <tr>
                 <td>Selected/checked</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                 <td>Delivery choices</td>
+                 <td>The selected option gets a thicker border, bold text, a subtle gradient and shadow, and a “Selected ✓” label.</td>
+                 <td>The thicker border, bold text, and “Selected ✓” message make the selection understandable without relying on color alone.</td>
             </tr>
             <tr>
                 <td>Open and status/result</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+               <td>Disclosure and confirmation</td>
+               <td>Opening the disclosure reveals the order confirmation information and triggers a short confirmation pulse.</td>
+               <td>The confirmation text remains visible and readable even when animation is removed or reduced.</td>
             </tr>
         </table>
         <h2>3. Effects inventory</h2>
@@ -113,35 +113,34 @@
             </tr>
             <tr>
                 <td>Pseudo-element</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[URL]</td>
+                <td>Adds an arrow to the View Order Status action to reinforce that it leads to the result.</td>
+                <td>The arrow is decorative reinforcement only; the link text still communicates the action if the pseudo-element is unavailable.</td>
+                <td>https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::after</td>
             </tr>
             <tr>
                 <td>Effect 1</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[URL]</td>
+                <td>Hover and focus movement on the action link provides immediate feedback that the control is interactive.</td>
+                <td>The link remains fully usable and understandable without the movement because the text and button styling remain visible.</td>
+                <td>https://developer.mozilla.org/en-US/docs/Web/CSS/:hover</td>
             </tr>
             <tr>
                 <td>Effect 2</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[URL]</td>
+                <td>Selected radio options receive a thicker border, bold text, shadow, background change, and a "Selected ✓" message.</td>
+                <td>The checked radio control and the visible "Selected ✓" text preserve the selection feedback without relying on color alone.</td>
+                <td>https://developer.mozilla.org/en-US/docs/Web/CSS/:checked</td>
             </tr>
             <tr>
                 <td>Effect 3</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
-                <td>[URL]</td>
+                <td>A short keyframe animation provides visual confirmation when the disclosure/status result is opened.</td>
+                <td>The confirmation content remains visible and readable after the animation finishes, so the feedback does not depend on <td>https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes</td>
             </tr>
         </table>
         <h2>4. Motion and CSS explanation</h2>
-        <p><strong>Transition 1:</strong> [Selector, trigger, explicit properties, duration/easing, and purpose]</p>
-        <p><strong>Transition 2:</strong> [Selector, trigger, explicit properties, duration/easing, and purpose]</p>
-        <p><strong>Keyframe animation:</strong> [Name, waypoints, trigger, iteration count, and purpose]</p>
-        <p><strong>Why these properties:</strong> [Connect choices to layout/paint/composition.]</p>
-        <p><strong>Reduced-motion alternative:</strong> [What is removed/replaced and how feedback remains.]</p>
+        <p><strong>Transition 1:</strong> The .action link transitions transform and box-shadow over 180ms with ease. Hover moves the control slightly upward and adds a shadow, providing quick visual feedback that the link is interactive.</p>
+        <p><strong>Transition 2:</strong> The .action::after arrow transitions its transform over 180ms with ease. On hover or keyboard focus, the arrow shifts slightly to the right to reinforce the direction of the action.</p>
+        <p><strong>Keyframe animation:</strong> The confirm-pulse animation runs once for 400ms when the details element is opened. It briefly scales the confirmation from its normal size to 1.03 and back to normal to draw attention to the successful result without creating continuous motion.</p>
+        <p><strong>Why these properties?</strong> Transform and box-shadow were chosen because they provide noticeable interaction feedback without changing the page layout. Explicit properties are transitioned instead of using transition: all, which keeps the motion intentional and predictable.</p>
+        <p><strong>Reduced-motion alternative:</strong> When prefers-reduced-motion: reduce is enabled, transition durations are reduced to nearly instant and the confirmation animation is removed. All important feedback remains available through text, borders, focus outlines, selected states, and the confirmation message.</p>
         <h2>5. Test record</h2>
         <table>
             <tr>
