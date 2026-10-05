@@ -150,36 +150,35 @@
             </tr>
             <tr>
                 <td>Keyboard and focus</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                <td>Used Tab to navigate through the interactive controls and arrow keys to change the radio selection. Focus indicators remained visible.</td>
+                <td>Passed after repair — focus feedback was strengthened with a 3px focus outline and offset so keyboard focus is clearly visible. Retesting with Tab confirmed the focus indicator remains easy to identify.</td>
             </tr>
             <tr>
                 <td>Pointer and no hover-only information</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                <td>Used the pointer to hover over and activate the View Order Status link and select both delivery options. Hover effects provided extra feedback, but no important information was available only on hover.</td>
+                <td>Passed — all actions and information remained available without relying on hover. No repair needed.</td>
             </tr>
             <tr>
                 <td>Reduced motion</td>
-                <td>[Response]</td>                    
-                <td>[Response]</td>
-            </tr>
+                <td>Enabled prefers-reduced-motion: reduce in Chrome DevTools and tested the interactive controls. Transitions became nearly instant and the confirmation keyframe animation did not play.</td>
+                <td>Passed — motion was reduced while the selected states, focus indicators, text, and confirmation feedback remained available. No repair needed.</td>
             <tr>
                 <td>Narrow width and 200% zoom</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                <td>Tested the page at a narrow browser width and 200% zoom. Content remained readable, interactive controls remained usable, and no important content overlapped or disappeared.</td>
+                <td>Passed — the layout remained usable and understandable at narrow width and 200% zoom. No repair needed.</td>
             </tr>
             <tr>
                 <td>Effects/CSS unavailable</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                <td>Temporarily removed the stylesheet link in Chrome DevTools and tested the page without CSS. The content remained readable, the View Order Status link worked, the radio buttons remained selectable, and the disclosure could still be opened.</td>
+                <td>Passed — the semantic HTML preserved the content and functionality without CSS or visual effects. No repair needed.</td>
             </tr>
             <tr>
                 <td>Performance recording</td>
-                <td>[Response]</td>
-                <td>[Response]</td>
+                <td>Recorded the page in Chrome DevTools Performance while activating the action link, changing delivery selections, and opening the disclosure. The interactions remained responsive and the recording showed an INP of 62 ms and CLS of 0.</td>
+                <td>Passed — the microinteractions remained smooth during the performance recording with no obvious performance problems. No repair needed.</td>
             </tr>
         </table>
-        <p><strong>Screenshot filenames and what each proves:</strong> [Response]</p>
+        <p><strong>Screenshot filenames and what each proves:</strong> KeyboardFocus.png shows the visible keyboard focus indicator on an interactive control. ReducedMotion.png shows the prefers-reduced-motion: reduce emulation used for motion testing. Zoom.png shows the page remaining usable at 200% zoom and a narrow width. CSS.png shows that the content and native controls remain usable without the stylesheet. Performance.png shows the Chrome DevTools performance recording used to check interaction responsiveness.</p>
         <p><strong>Repair and retest summary:</strong> [Response]</p>
         <h2>6. AI disclosure</h2>
         <p><strong>Tool and purpose, or none:</strong> [Response]</p>
